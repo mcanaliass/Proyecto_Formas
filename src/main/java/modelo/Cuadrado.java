@@ -29,6 +29,11 @@ public class Cuadrado extends Rectangulo {
     }
 
     @Override
+    public int hashCode() {
+        return java.util.Objects.hash(getLado());
+    }
+
+    @Override
     public String toString() {
         return "Cuadrado{lado=" + getLado() + '}';
     }

@@ -81,4 +81,22 @@ public class Coleccion {
     public void setCuerpos(List<Cuerpo> cuerpos) {
         this.cuerpos = cuerpos;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Coleccion)) return false;
+        Coleccion otra = (Coleccion) obj;
+        return figuras.equals(otra.figuras) && cuerpos.equals(otra.cuerpos);
+    }
+
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(figuras, cuerpos);
+    }
+
+    @Override
+    public String toString() {
+        return "Coleccion{figuras=" + figuras.size() + ", cuerpos=" + cuerpos.size() + '}';
+    }
 }

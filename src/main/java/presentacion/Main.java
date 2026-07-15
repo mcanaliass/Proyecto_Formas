@@ -8,8 +8,7 @@ public class Main {
     public static void main(String[] args) {
         ColeccionControlador controlador = new ColeccionControlador();
 
-        // Descomenta la siguiente línea si quieres cargar al iniciar
-        // las figuras/cuerpos ya guardados en la base de datos:
+        // Opcion de cargar info de sesiones anteriores:
         // controlador.cargarDesdeBaseDeDatos();
 
         Menu menu = new Menu(controlador);
